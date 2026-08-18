@@ -5,12 +5,10 @@ from tkinter import messagebox
 # ============================================================
 #                    BLACK HOLE
 # ============================================================
-
 ROWS = 6
 
 TICKETS = range(1, 11)
-
-# Your exact 6-neighbor coordinate system
+# exact 6-neighbor coordinate system
 DIRECTIONS = (
     (-1, -1),
     (-1,  0),
@@ -19,40 +17,27 @@ DIRECTIONS = (
     ( 1,  0),
     ( 1,  1),
 )
-
-
 # ============================================================
 #                    COLORS
 # ============================================================
-
 BG = "#FFF7FB"
 PANEL = "#FFFFFF"
-
 TEXT = "#5B465A"
 SUBTEXT = "#9A7F96"
-
 PLAYER_A_COLOR = "#F6A6C1"       # pink
 PLAYER_A_DARK = "#D96B96"
-
 PLAYER_B_COLOR = "#B9B7F8"       # lavender
 PLAYER_B_DARK = "#7773D1"
-
 EMPTY_COLOR = "#FFE6F0"
 EMPTY_OUTLINE = "#E9AFC7"
-
 SELECTED_COLOR = "#FFD166"       # soft yellow
-
 BLACK_HOLE = "#35263A"
-
 TICKET_BG = "#FFF0F6"
 TICKET_ACTIVE = "#F7C6D9"
 TICKET_DISABLED = "#E8E1E6"
-
-
 # ============================================================
 #                    GAME DATA
 # ============================================================
-
 board = {
     (x, y): None
     for x in range(ROWS)
@@ -79,19 +64,15 @@ game_over = False
 # ============================================================
 #                    WINDOW
 # ============================================================
-
 root = tk.Tk()
 
 root.title("Black Hole ✨")
 root.geometry("1050x820")
 root.configure(bg=BG)
 root.resizable(False, False)
-
-
 # ============================================================
 #                    TOP TITLE
 # ============================================================
-
 title = tk.Label(
     root,
     text="✦  BLACK HOLE  ✦",
